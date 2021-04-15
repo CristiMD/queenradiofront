@@ -1,0 +1,28 @@
+.track-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    padding: 0 50px;
+}
+
+.artwork {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.name {
+    text-align: center;
+    color: #d2d2d2;
+    font-size: 25px;
+}
+
+.audio-controls {
+    margin: auto;
+    margin-bottom: 10px;
+}
