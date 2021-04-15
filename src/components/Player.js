@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import AudioComponent from './AudioComponent';
 import '../styles/Player.css';
+import {Link} from 'react-router-dom';
 
 function Player() {
 
@@ -40,7 +41,7 @@ function Player() {
                             return <div onClick={() => changeSong(song._id)} key={song._id} id={currentSong._id === song._id ? "selected" : ''} className="song-detail">{song.name}</div>;
                         }) : 'No songs'}
                         </div>
-                    <a className="add-song" href="/add">Add song</a>
+                    <Link className="add-song" to="/add">Add song</Link>
                 </div>
             </div>
             {songs.length && currentSong.name ?

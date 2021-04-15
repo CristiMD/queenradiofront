@@ -3,6 +3,7 @@ import axios from 'axios';
 import "../styles/AddSong.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
+import {Link} from 'react-router-dom';
 
 
 function Player() {
@@ -80,7 +81,7 @@ function Player() {
             visible={loading}
             timeout={5000}
           /></div>}
-            <a  id="back-btn" href="/">Back to player</a>
+            <Link id="back-btn" to="/">Back to player</Link>
         </div>
       </div>
     );
