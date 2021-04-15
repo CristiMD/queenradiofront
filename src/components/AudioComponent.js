@@ -5,8 +5,8 @@ import "../styles/AudioComponent.css";
 const AudioPlayer = (props) => {
     const {tracks, currentSong} = props;
     const endpoint = 'https://queenradio-cristi.herokuapp.com';
-    const coverEndpoint = endpoint+'/covers/';
-    const songEndpoint = endpoint+'/songs/';
+    const coverEndpoint = 'https://queenradio.s3.eu-central-1.amazonaws.com/';
+    const songEndpoint = 'https://queenradio.s3.eu-central-1.amazonaws.com/';
     // State
     const [trackIndex, setTrackIndex] = useState(0);
     const [trackProgress, setTrackProgress] = useState(0);
