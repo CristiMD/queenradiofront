@@ -114,6 +114,18 @@ const AudioPlayer = (props) => {
         };
     }, []);
 
+    const setPlayPause = (state) => {
+        if(state) {
+            audioRef.current.play();
+            setIsPlaying(true);
+            audioRef.current.play();
+        } else {
+            audioRef.current.pause();
+            setIsPlaying(false);
+            audioRef.current.pause();
+        }
+    }
+
     // useEffect(() => {
     //     // Pause and clean up on unmount
     //     console.log(currentSong._id, "csdsd")
@@ -140,7 +152,7 @@ const AudioPlayer = (props) => {
             isPlaying={isPlaying}
             onPrevClick={toPrevTrack}
             onNextClick={toNextTrack}
-            onPlayPauseClick={setIsPlaying}
+            onPlayPauseClick={setPlayPause}
             />
             <input
             type="range"
